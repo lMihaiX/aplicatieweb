@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizualizare Persoane</title>
+</head>
+<body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <h1>Persoanele care vor sa adopte un stil de viata sanatos</h1>
+    <ol>
+        {% for person in persons %}
+            <li>{{ person.Nume }} {{ person.Prenume }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
